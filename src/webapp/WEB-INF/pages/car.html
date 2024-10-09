@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мои Бибики</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>МОДЕЛЬ</th>
+        <th>ЦВЕТ</th>
+        <th>ГОД</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Цикл по списку объектов people -->
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.model}"></td>
+        <td th:text="${car.color}"></td>
+        <td th:text="${car.year}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
