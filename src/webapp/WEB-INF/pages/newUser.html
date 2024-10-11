@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form th:action="@{/save}" th:object="${newUser}" method="post" accept-charset="UTF-8">
+    <table border="0" cellpadding="5">
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" th:field="*{name}" /></td>
+        </tr>
+        <tr>
+            <td>Email: </td>
+            <td><input type="email" th:field="*{email}" /></td>
+        </tr>
+        <tr>
+            <td>Surname: </td>
+            <td><input type="text" th:field="*{surname}" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Save" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
