@@ -24,7 +24,7 @@ import java.util.Properties;
 
 @ComponentScan("web")
 public class HibernateConfig {
-    private Environment env;
+    private final Environment env;
 
     @Autowired
     public HibernateConfig(Environment env) {

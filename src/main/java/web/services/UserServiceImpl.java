@@ -9,17 +9,15 @@ import web.models.User;
 import java.util.List;
 
 @Service
-public class UserServices {
+public class UserServiceImpl implements UserService {
     UserDao userDao;
 
     @Autowired
-    public UserServices(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
     }
 
-    public UserServices() {
-
-    }
+    public UserServiceImpl() {}
 
     @Transactional
     public void save(User user) {
